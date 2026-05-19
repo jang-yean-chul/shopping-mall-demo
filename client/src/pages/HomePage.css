@@ -171,21 +171,30 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-lg) var(--space-md);
+  gap: 24px 20px;
   margin-bottom: var(--space-3xl);
 }
 
 /* ── 상품 카드 ────────────────────────────────────── */
 .product-card {
   cursor: pointer;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 
 .product-card-img-wrap {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   background: var(--color-bg-gray);
   overflow: hidden;
-  margin-bottom: var(--space-sm);
 }
 
 @keyframes imgFadeIn {
@@ -242,7 +251,7 @@
   letter-spacing: 0.5px;
 }
 
-.product-card-info { padding: 0 2px; }
+.product-card-info { padding: 10px 12px 12px; }
 
 .product-card-brand {
   font-size: var(--font-size-xs);
