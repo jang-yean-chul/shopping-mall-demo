@@ -221,5 +221,6 @@ input, select, textarea { font-family: inherit; }
 /* ── 페이지 공통 래퍼 ─────────────────────────────── */
 .page-wrapper {
   min-height: 60vh;
-  padding: var(--space-2xl) 0;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }

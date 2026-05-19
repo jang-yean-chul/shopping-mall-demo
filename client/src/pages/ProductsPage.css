@@ -49,7 +49,7 @@
 
 /* ── 이미지: 비율 4/5 (3/4보다 덜 세로) ─────────── */
 .product-card-image {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background-color: #f3f4f6;
   overflow: hidden;
   position: relative;
