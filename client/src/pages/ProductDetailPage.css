@@ -1,21 +1,18 @@
 .pd-page {
-  overflow: hidden; /* BFC: prevents margin-top collapse through this wrapper */
+  padding-top: 24px;
+  padding-bottom: 56px;
 }
 
 .product-detail {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
-  margin-top: 24px;
-  margin-bottom: 72px;
 }
 
 @media (min-width: 768px) {
   .product-detail {
     grid-template-columns: 3fr 2fr;
-    gap: 40px;
-    margin-top: 24px;
-    margin-bottom: 72px;
+    gap: 36px;
     align-items: start;
   }
 }
@@ -114,26 +111,23 @@
 .product-detail-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding-top: 20px;
-}
-
-@media (max-width: 767px) {
-  .product-detail-info {
-    padding-top: 0;
-  }
+  gap: 10px;
+  background: var(--color-bg-gray);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px 20px;
 }
 
 /* 뱃지 */
 .pd-badges {
   display: flex;
-  gap: 6px;
+  gap: 5px;
 }
 
 .pd-badge {
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 999px;
-  font-size: var(--font-size-xs);
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -143,7 +137,7 @@
 
 /* 브랜드 / 이름 */
 .product-detail-brand {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: 600;
   color: var(--color-text-muted);
   text-transform: uppercase;
@@ -151,66 +145,66 @@
 }
 
 .product-detail-name {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 /* 별점 */
 .pd-rating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .pd-stars { display: flex; gap: 1px; }
 
-.pd-star { font-size: 15px; color: #e5e7eb; }
+.pd-star { font-size: 13px; color: #e5e7eb; }
 .pd-star.filled { color: #f59e0b; }
 
 .pd-rating-value {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: 700;
 }
 
 .pd-rating-count {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
 }
 
 /* 구분선 */
 .pd-divider {
   border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 0;
+  border-top: 1px solid var(--color-border-dark);
+  margin: 2px 0;
 }
 
 /* 가격 */
 .pd-price-row {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+  align-items: baseline;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .pd-price {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 800;
   color: var(--color-primary);
 }
 
 .pd-original {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-text-light);
   text-decoration: line-through;
 }
 
 .pd-discount {
-  font-size: var(--font-size-xs);
+  font-size: 10px;
   font-weight: 700;
   color: var(--color-accent);
   background: var(--color-accent-light);
-  padding: 3px 8px;
+  padding: 2px 7px;
   border-radius: 999px;
 }
 
@@ -218,30 +212,32 @@
 .pd-section {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
 }
 
 .pd-section-label {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* 사이즈 */
 .pd-sizes {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .pd-size-btn {
-  min-width: 44px;
-  height: 34px;
-  padding: 0 10px;
-  border-radius: var(--radius-md);
+  min-width: 38px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: var(--radius-sm);
   border: 1.5px solid var(--color-border-dark);
-  background: transparent;
-  font-size: var(--font-size-sm);
+  background: var(--color-white);
+  font-size: var(--font-size-xs);
   font-weight: 500;
   color: var(--color-text);
   cursor: pointer;
@@ -258,18 +254,18 @@
 }
 
 /* 색상 */
-.pd-colors { display: flex; gap: 10px; flex-wrap: wrap; }
+.pd-colors { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .pd-color-btn {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 2px solid rgba(0,0,0,0.1);
   cursor: pointer;
   padding: 0;
   transition: all 0.15s ease;
-  outline: 3px solid transparent;
-  outline-offset: 3px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .pd-color-btn:hover { transform: scale(1.1); }
@@ -279,26 +275,27 @@
 .pd-qty-row {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .pd-qty {
   display: flex;
   align-items: center;
   border: 1.5px solid var(--color-border-dark);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
+  background: var(--color-white);
 }
 
 .pd-qty-btn {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   cursor: pointer;
   transition: background 0.15s;
@@ -307,20 +304,20 @@
 .pd-qty-btn:hover { background: var(--color-bg-gray); }
 
 .pd-qty-value {
-  width: 44px;
+  width: 36px;
   text-align: center;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: 600;
   border-left: 1.5px solid var(--color-border);
   border-right: 1.5px solid var(--color-border);
-  height: 36px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pd-stock {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
 }
 
@@ -328,32 +325,31 @@
 
 /* 설명 */
 .product-detail-desc {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
   line-height: 1.7;
-  flex: 1;
 }
 
 /* 버튼 */
 .pd-actions {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  margin-top: auto;
+  gap: 7px;
+  margin-top: 4px;
 }
 
 .product-detail-btn {
   width: 100%;
-  height: 44px;
-  font-size: var(--font-size-base);
+  height: 40px;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   border-radius: var(--radius-md);
 }
 
 .product-detail-wish-btn {
   width: 100%;
-  height: 40px;
-  font-size: var(--font-size-sm);
+  height: 36px;
+  font-size: var(--font-size-xs);
   font-weight: 600;
   border-radius: var(--radius-md);
   border: 1.5px solid var(--color-border-dark);
