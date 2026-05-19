@@ -1,3 +1,7 @@
+.pd-page {
+  overflow: hidden; /* BFC: prevents margin-top collapse through this wrapper */
+}
+
 .product-detail {
   display: grid;
   grid-template-columns: 1fr;
@@ -26,7 +30,7 @@
 @media (min-width: 768px) {
   .product-detail-image-area {
     position: sticky;
-    top: 80px;
+    top: var(--header-total-h);
   }
 }
 

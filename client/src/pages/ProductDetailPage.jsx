@@ -395,7 +395,7 @@ export default function ProductDetailPage() {
   };
 
   return (
-    <div>
+    <div className="pd-page">
       {/* ── 상품 기본 정보 (이미지 + 옵션) ──────────────── */}
       <div className="product-detail container">
         {/* 이미지 캐러셀 */}
