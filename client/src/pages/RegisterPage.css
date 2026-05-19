@@ -1,0 +1,259 @@
+/* ── 페이지 래퍼 ─────────────────────────────────── */
+.register-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-md);
+  background: var(--color-bg-gray);
+}
+
+/* ── 카드 ────────────────────────────────────────── */
+.register-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 560px;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+/* ── 헤더 ────────────────────────────────────────── */
+.register-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-xs);
+}
+
+.register-subtitle {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── 단계 표시 ────────────────────────────────────── */
+.register-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.register-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.step-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-light);
+  background: var(--color-white);
+  transition: all var(--transition-normal);
+}
+
+.step-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  white-space: nowrap;
+  transition: color var(--transition-normal);
+}
+
+.register-step.active .step-number {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.register-step.active .step-label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.register-step.done .step-number {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-white);
+}
+
+.register-step.done .step-label {
+  color: var(--color-text-muted);
+}
+
+.step-connector {
+  width: 56px;
+  height: 2px;
+  background: var(--color-border);
+  margin: 0 var(--space-sm);
+  margin-bottom: 22px;
+  flex-shrink: 0;
+  transition: background var(--transition-normal);
+}
+
+.step-connector.done { background: var(--color-primary); }
+
+/* ── 폼 ──────────────────────────────────────────── */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-label .required {
+  color: var(--color-accent);
+  margin-left: 2px;
+}
+
+.form-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ── 약관 동의 ────────────────────────────────────── */
+.terms-box {
+  border: 1.5px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: var(--color-bg-gray);
+}
+
+.terms-all {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  user-select: none;
+}
+
+.terms-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-text-sub);
+}
+
+.terms-item input[type='checkbox'],
+.terms-all input[type='checkbox'] {
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.terms-link {
+  margin-left: auto;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  padding: 2px 4px;
+  flex-shrink: 0;
+}
+
+.terms-link:hover { color: var(--color-text); }
+
+/* ── 하단 버튼 ────────────────────────────────────── */
+.register-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+/* ── 하단 링크 ───────────────────────────────────── */
+.register-footer {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.register-footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.register-footer a:hover { text-decoration: underline; }
+
+/* ── 완료 화면 ────────────────────────────────────── */
+.register-done {
+  text-align: center;
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.register-done-icon {
+  font-size: 52px;
+  margin-bottom: var(--space-md);
+  line-height: 1;
+}
+
+.register-done-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.register-done-desc {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-base);
+}
+
+/* ── 반응형 ──────────────────────────────────────── */
+@media (max-width: 600px) {
+  .register-card {
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) var(--space-md);
+    box-shadow: none;
+    border: none;
+  }
+
+  .register-page { padding: var(--space-md); }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .step-connector { width: 36px; }
+}

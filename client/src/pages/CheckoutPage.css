@@ -1,0 +1,422 @@
+.co-page {
+  max-width: 1100px;
+}
+
+.co-empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--color-text-muted);
+}
+
+.co-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.5px;
+}
+
+/* ── 레이아웃 ────────────────────────────────────────── */
+.co-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .co-layout { grid-template-columns: 1fr; }
+}
+
+/* ── 섹션 공통 ──────────────────────────────────────── */
+.co-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-bottom: var(--space-md);
+}
+
+.co-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── 주문 상품 ──────────────────────────────────────── */
+.co-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.co-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.co-item-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.co-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.co-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.co-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.co-item-opts {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.co-color-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.co-color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.co-item-qty {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.co-item-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* ── 배송지 폼 ──────────────────────────────────────── */
+.co-addr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.co-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .co-row { grid-template-columns: 1fr; }
+}
+
+.co-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.co-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.co-input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--color-text);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.co-input:focus { border-color: var(--color-primary); }
+
+select.co-input { cursor: pointer; }
+
+.co-memo-custom { margin-top: 6px; }
+
+.co-input--error { border-color: #ef4444; }
+.co-input--error:focus { border-color: #ef4444; }
+
+.co-field-error {
+  font-size: 11px;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+/* ── 결제 수단 ──────────────────────────────────────── */
+.co-payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.co-pay-option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  user-select: none;
+}
+
+.co-pay-option input[type="radio"] { display: none; }
+
+.co-pay-option.selected {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: #f5f3ff;
+  font-weight: 700;
+}
+
+/* ── 약관 ───────────────────────────────────────────── */
+.co-agree {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.co-agree input { width: 16px; height: 16px; cursor: pointer; }
+
+/* ── 우측 결제 요약 ─────────────────────────────────── */
+.co-right {
+  position: sticky;
+  top: calc(var(--header-total-h) + 16px);
+}
+
+.co-summary {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.co-summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.co-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.co-free { color: #16a34a; font-weight: 700; }
+
+.co-shipping-notice {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: -4px;
+}
+
+.co-summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--color-border);
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.co-total-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.co-submit-btn {
+  width: 100%;
+  height: 52px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  letter-spacing: -0.3px;
+}
+
+.co-submit-btn:hover   { opacity: 0.88; }
+.co-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.co-pg-notice {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ── 결제 실패 모달 ─────────────────────────────────── */
+.co-fail-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.co-fail-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  cursor: default;
+  pointer-events: all;
+  z-index: -1;
+  color: transparent;
+}
+
+.co-fail-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  pointer-events: all;
+}
+
+.co-fail-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 10px;
+  pointer-events: all;
+}
+
+.co-fail-msg {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 300px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  pointer-events: all;
+}
+
+.co-fail-close {
+  width: 160px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 14px;
+  pointer-events: all;
+}
+
+.co-policy-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  pointer-events: all;
+}
+
+.co-policy-actions {
+  display: flex;
+  gap: 10px;
+  pointer-events: all;
+}
+
+.co-policy-btn-cancel {
+  height: 44px;
+  padding: 0 24px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.co-policy-btn-cancel:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.co-policy-btn-confirm {
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 10px;
+  font-size: 14px;
+}

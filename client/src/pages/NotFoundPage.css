@@ -1,0 +1,25 @@
+.not-found {
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.not-found-code {
+  font-size: 96px;
+  font-weight: 700;
+  color: #e5e7eb;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.not-found p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.not-found a {
+  color: var(--color-primary);
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+}

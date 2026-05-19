@@ -1,0 +1,14 @@
+# 개발 중 스크린샷
+*.png
+*.jpg
+*.jpeg
+
+# 시드용 로컬 이미지
+쇼핑몰 사진/
+
+# 사용하지 않는 프로젝트
+shopping-mall-page/
+
+# OS
+.DS_Store
+Thumbs.db
